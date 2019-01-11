@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams , MenuController} from 'ionic-angular';
 import {Pagina2Page} from "../index.pagina";
 /**
  * Generated class for the PrincipalPage page.
@@ -16,7 +16,7 @@ import {Pagina2Page} from "../index.pagina";
 export class PrincipalPage {
 
 pagina2:any = Pagina2Page;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController) {
 
   }
 
@@ -27,6 +27,10 @@ pagina2:any = Pagina2Page;
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PrincipalPage');
+  }
+
+  mostarMenu(){
+     this.menuCtrl.toggle(); 
   }
 
 }
